@@ -25,10 +25,8 @@
       improvementTitle: 'ご意見をお聞かせください',
       improvementLead: 'その他、改善してほしい箇所はありましたか？',
       improvementSubmitText: '確認する',
-      thanksTitle: 'ご回答ありがとうございました',
-      thanksLead: 'いただいた内容は、今後のサービス改善に活用いたします。',
-      closeButtonText: 'ページを閉じる',
-      closeNoteText: 'ページを閉じられない場合は、ブラウザやアプリの戻るボタンで閉じてください。',
+      thanksTitle: 'ご回答ありがとうございます',
+      thanksLead: 'いただいた内容は、<br>今後のサービス改善に活用いたします。',
 
       colors: {
         main: '#1f7a5a',
@@ -328,8 +326,6 @@
       <p id="thanksShopName" class="shop-name"></p>
       <h1 id="thanksTitle"></h1>
       <p id="thanksLead" class="lead"></p>
-      <button id="closeButton" class="btn btn-sub" type="button" onclick="closePage()"></button>
-      <p id="closeNote" class="close-note"></p>
     </section>
   </main>
 
@@ -365,8 +361,6 @@
       setText('improvementSubmitButton', EDIT_CONFIG.improvementSubmitText);
       setText('thanksTitle', EDIT_CONFIG.thanksTitle);
       setText('thanksLead', EDIT_CONFIG.thanksLead);
-      setText('closeButton', EDIT_CONFIG.closeButtonText);
-      setText('closeNote', EDIT_CONFIG.closeNoteText);
 
       const logoIds = ['logo', 'improvementLogo', 'thanksLogo'];
       const shopNameIds = ['shopName', 'improvementShopName', 'thanksShopName'];
@@ -438,13 +432,6 @@
         button.disabled = false;
         button.textContent = originalText;
       }
-    }
-
-    function closePage() {
-      window.close();
-      setTimeout(() => {
-        document.getElementById('closeNote').style.display = 'block';
-      }, 200);
     }
 
     function loadData() {
