@@ -14,6 +14,7 @@
 
       mainTitle: '本日はご来店<br>ありがとうございました',
       mainLead: '今後のサービス向上のため、<br>満足度をお聞かせください。',
+      staffNote: '入力が完了しましたら、<br>スタッフまでお声がけください。',
       selectLabel: '満足度を選択してください',
       submitButtonText: '送信',
       noSelectAlertText: '満足度を選択してください。',
@@ -24,7 +25,7 @@
 
       improvementTitle: 'ご意見をお聞かせください',
       improvementLead: 'その他、改善してほしい箇所はありましたか？',
-      improvementSubmitText: '確認する',
+      improvementSubmitText: '送信',
       thanksTitle: 'ご回答ありがとうございます',
       thanksLead: 'いただいた内容は、<br>今後のサービス改善に活用いたします。',
 
@@ -113,9 +114,22 @@
       color: #555;
     }
 
+    .staff-note {
+      margin: -8px 0 22px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(31, 122, 90, 0.08);
+      border: 1px solid rgba(31, 122, 90, 0.18);
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--main);
+      line-height: 1.6;
+    }
+
     .section-title {
       margin: 0 0 12px;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 700;
     }
 
@@ -294,6 +308,7 @@
       <p id="shopName" class="shop-name"></p>
       <h1 id="mainTitle"></h1>
       <p id="mainLead" class="lead"></p>
+      <p id="staffNote" class="staff-note"></p>
 
       <p id="selectLabel" class="section-title"></p>
       <div class="rating-list" role="radiogroup" aria-labelledby="selectLabel">
@@ -354,6 +369,7 @@
       setText('thanksShopName', '');
       setHtml('mainTitle', EDIT_CONFIG.mainTitle);
       setHtml('mainLead', EDIT_CONFIG.mainLead);
+      setHtml('staffNote', EDIT_CONFIG.staffNote);
       setText('selectLabel', EDIT_CONFIG.selectLabel);
       setText('mainSubmitButton', EDIT_CONFIG.submitButtonText);
       setText('improvementTitle', EDIT_CONFIG.improvementTitle);
