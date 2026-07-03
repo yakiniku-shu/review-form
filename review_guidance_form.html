@@ -26,7 +26,7 @@
       improvementLead: 'その他、改善してほしい箇所はありましたか？',
       improvementSubmitText: '確認する',
       thanksTitle: 'ご回答ありがとうございます',
-      thanksLead: 'いただいた内容は、サービス改善に活用いたします。',
+      thanksLead: 'いただいた内容は、<br>今後のサービス改善に活用いたします。',
 
       colors: {
         main: '#1f7a5a',
@@ -360,7 +360,7 @@
       setText('improvementLead', EDIT_CONFIG.improvementLead);
       setText('improvementSubmitButton', EDIT_CONFIG.improvementSubmitText);
       setText('thanksTitle', EDIT_CONFIG.thanksTitle);
-      setText('thanksLead', EDIT_CONFIG.thanksLead);
+      setHtml('thanksLead', EDIT_CONFIG.thanksLead);
 
       const logoIds = ['logo', 'improvementLogo', 'thanksLogo'];
       const shopNameIds = ['shopName', 'improvementShopName', 'thanksShopName'];
